@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaca Stories - Plataforma de Stories para seu Negócio</title>
+    <meta name="description" content="Aumente o engajamento do seu site com vídeos stories. Dashboard próprio, analytics integrado e sem limites de uso por R$ 89,90/mês">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .gradient-bg {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .pulse-btn {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: .8;
+            }
+        }
+
+        .story-phone {
+            border-radius: 2rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        .check-icon {
+            color: #10b981;
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="text-4xl">🐄</div>
+                    <span class="text-2xl font-bold text-gray-900">Vaca Stories</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#beneficios" class="text-gray-600 hover:text-green-600 transition">Benefícios</a>
+                    <a href="#como-funciona" class="text-gray-600 hover:text-green-600 transition">Como Funciona</a>
+                    <a href="#casos-uso" class="text-gray-600 hover:text-green-600 transition">Casos de Uso</a>
+                    <a href="#preco" class="text-gray-600 hover:text-green-600 transition">Preço</a>
+                    <a href="#cta" class="gradient-bg text-white px-6 py-3 rounded-lg font-semibold hover:opacity-90 transition">
+                        Começar Agora
+                    </a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-600">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#beneficios" class="block text-gray-600 hover:text-green-600">Benefícios</a>
+                <a href="#como-funciona" class="block text-gray-600 hover:text-green-600">Como Funciona</a>
+                <a href="#casos-uso" class="block text-gray-600 hover:text-green-600">Casos de Uso</a>
+                <a href="#preco" class="block text-gray-600 hover:text-green-600">Preço</a>
+                <a href="#cta" class="block gradient-bg text-white px-6 py-3 rounded-lg font-semibold text-center">
+                    Começar Agora
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-green-50 to-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="animate-fade-in-up">
+                    <div class="inline-block bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                        ✨ Stories para seu Website
+                    </div>
+                    <h1 class="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                        Transforme Visitantes em <span class="gradient-text">Clientes Engajados</span>
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Adicione vídeos stories no seu site e aumente a retenção em até <strong>300%</strong>. 
+                        Dashboard completo, analytics integrado e sem limites de uso.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="#cta" class="gradient-bg text-white px-8 py-4 rounded-lg font-bold text-lg hover:opacity-90 transition text-center shadow-lg pulse-btn">
+                            Começar Agora - R$ 89,90/mês
+                        </a>
+                        <a href="#como-funciona" class="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg border-2 border-gray-200 hover:border-green-500 transition text-center">
+                            Ver Como Funciona
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-6 text-sm text-gray-600">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span>Sem limite de vídeos</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span>Sem limite de views</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-check-circle text-green-500"></i>
+                            <span>Analytics completo</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="story-phone bg-gradient-to-b from-gray-900 to-gray-800 p-4 max-w-sm mx-auto">
+                        <div class="bg-gray-100 rounded-2xl overflow-hidden aspect-[9/16]">
+                            <div class="h-full bg-gradient-to-b from-green-400 to-green-600 flex items-center justify-center text-white">
+                                <div class="text-center p-8">
+                                    <i class="fas fa-play-circle text-8xl mb-4 opacity-90"></i>
+                                    <p class="text-2xl font-bold mb-2">Seus Stories Aqui</p>
+                                    <p class="text-sm opacity-90">Vídeos verticais, autoplay, engajamento máximo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Floating elements -->
+                    <div class="absolute -top-4 -right-4 bg-white rounded-2xl shadow-xl p-4 hidden lg:block">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-green-100 rounded-full p-3">
+                                <i class="fas fa-chart-line text-green-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">+300%</p>
+                                <p class="text-xs text-gray-600">Engajamento</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-xl p-4 hidden lg:block">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-blue-100 rounded-full p-3">
+                                <i class="fas fa-eye text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-900">85% Retenção</p>
+                                <p class="text-xs text-gray-600">Média do setor</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem/Agitation Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+                Seu site está perdendo dinheiro agora mesmo
+            </h2>
+            <p class="text-xl text-gray-600 mb-12">
+                A maioria dos visitantes sai do seu site em menos de 10 segundos. 
+                Sem engajamento, sem conversão, sem resultados.
+            </p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="text-red-500 text-5xl mb-4">❌</div>
+                    <h3 class="font-bold text-xl mb-3">Baixa Retenção</h3>
+                    <p class="text-gray-600">Visitantes saem sem ver seu conteúdo completo</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="text-red-500 text-5xl mb-4">📉</div>
+                    <h3 class="font-bold text-xl mb-3">Pouco Engajamento</h3>
+                    <p class="text-gray-600">Páginas estáticas não prendem atenção</p>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-sm">
+                    <div class="text-red-500 text-5xl mb-4">💸</div>
+                    <h3 class="font-bold text-xl mb-3">Conversões Perdidas</h3>
+                    <p class="text-gray-600">Menos tempo no site = menos vendas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    A solução que seus visitantes já conhecem
+                </h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Stories funcionam no Instagram, TikTok, WhatsApp... Por que não no seu site? 
+                    Seus clientes já estão acostumados com vídeos verticais e autoplay.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="bg-gradient-to-br from-green-500 to-green-700 rounded-3xl p-8 text-white">
+                        <h3 class="text-2xl font-bold mb-6">Exemplos de uso:</h3>
+                        <ul class="space-y-4">
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-video text-2xl mt-1"></i>
+                                <div>
+                                    <strong class="block mb-1">Apresentação de Produtos</strong>
+                                    <p class="text-green-100">Mostre seus produtos em ação com vídeos curtos</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-star text-2xl mt-1"></i>
+                                <div>
+                                    <strong class="block mb-1">Depoimentos de Clientes</strong>
+                                    <p class="text-green-100">Prova social em vídeo aumenta credibilidade</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-graduation-cap text-2xl mt-1"></i>
+                                <div>
+                                    <strong class="block mb-1">Tutoriais Rápidos</strong>
+                                    <p class="text-green-100">Ensine como usar seu produto/serviço</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fas fa-bullhorn text-2xl mt-1"></i>
+                                <div>
+                                    <strong class="block mb-1">Ofertas e Promoções</strong>
+                                    <p class="text-green-100">Destaque lançamentos e ofertas especiais</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-2xl shadow-lg border-2 border-green-500">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="bg-green-100 rounded-full p-4">
+                                    <i class="fas fa-rocket text-green-600 text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-xl">Fácil de Implementar</h4>
+                            </div>
+                            <p class="text-gray-600">
+                                Cole uma linha de código no seu site e pronto. Funciona em qualquer plataforma.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="bg-blue-100 rounded-full p-4">
+                                    <i class="fas fa-mobile-alt text-blue-600 text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-xl">100% Responsivo</h4>
+                            </div>
+                            <p class="text-gray-600">
+                                Funciona perfeitamente em celular, tablet e desktop. Seus clientes veem de qualquer lugar.
+                            </p>
+                        </div>
+                        <div class="bg-white p-6 rounded-2xl shadow-lg">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div class="bg-purple-100 rounded-full p-4">
+                                    <i class="fas fa-chart-bar text-purple-600 text-2xl"></i>
+                                </div>
+                                <h4 class="font-bold text-xl">Analytics Integrado</h4>
+                            </div>
+                            <p class="text-gray-600">
+                                Veja quantas pessoas assistiram, quanto tempo ficaram e integre com Google Analytics 4.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features/Benefits Section -->
+    <section id="beneficios" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Tudo que você precisa em uma plataforma
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Dashboard completo para gerenciar, distribuir e analisar seus vídeos
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm card-hover">
+                    <div class="bg-green-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-film text-green-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Gestão de Vídeos</h3>
+                    <p class="text-gray-600 mb-6">
+                        Faça upload e gerencie seus vídeos stories de forma simples. 
+                        Organize por categorias, defina ordem de exibição e muito mais.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Upload ilimitado de vídeos</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Organize por categorias</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Preview antes de publicar</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm card-hover border-2 border-green-500">
+                    <div class="bg-gradient-to-br from-green-500 to-green-700 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-white text-3xl"></i>
+                    </div>
+                    <div class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs font-bold mb-4">
+                        MAIS POPULAR
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Tokens de Integração</h3>
+                    <p class="text-gray-600 mb-6">
+                        Crie tokens para integrar em seus sites. Controle quais domínios 
+                        podem exibir seus vídeos com segurança total.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Múltiplos tokens por empresa</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Controle de domínios permitidos</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Ative/desative quando quiser</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm card-hover">
+                    <div class="bg-blue-100 w-16 h-16 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-blue-600 text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Analytics</h3>
+                    <p class="text-gray-600 mb-6">
+                        Acompanhe o desempenho dos seus vídeos em tempo real. 
+                        Integração nativa com Google Analytics 4.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Visualizações em tempo real</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Tempo médio de visualização</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-gray-700">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>Integração com GA4</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="como-funciona" class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Como funciona? Simples em 3 passos
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Em menos de 10 minutos você está no ar
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-green-500 to-green-700 w-20 h-20 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6 shadow-lg">
+                        1
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Faça Upload dos Vídeos</h3>
+                    <p class="text-gray-600">
+                        Entre no dashboard e faça upload dos seus vídeos stories. 
+                        Pode ser depoimento, produto, tutorial - o que fizer sentido pro seu negócio.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-green-500 to-green-700 w-20 h-20 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6 shadow-lg">
+                        2
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Gere um Token</h3>
+                    <p class="text-gray-600">
+                        Crie um token de integração com um clique. 
+                        Defina em quais domínios seus vídeos podem aparecer.
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-gradient-to-br from-green-500 to-green-700 w-20 h-20 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-6 shadow-lg">
+                        3
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Cole no Seu Site</h3>
+                    <p class="text-gray-600">
+                        Adicione uma linha de código no seu site e pronto! 
+                        Seus stories estarão rodando e gerando engajamento.
+                    </p>
+                </div>
+            </div>
+            <div class="mt-12 bg-gray-100 rounded-2xl p-8">
+                <h4 class="text-xl font-bold mb-4 flex items-center gap-3">
+                    <i class="fas fa-code text-green-600 text-2xl"></i>
+                    Exemplo de Implementação:
+                </h4>
+                <pre class="bg-gray-900 text-green-400 p-6 rounded-xl overflow-x-auto text-sm"><code>&lt;!-- Cole este código onde quiser exibir os stories --&gt;
+&lt;script src="https://videos-api.webdevinkel.workers.dev/embed/stories.js"&gt;&lt;/script&gt;
+&lt;div data-vaca-stories="seu-token-aqui"&gt;&lt;/div&gt;</code></pre>
+                <p class="text-gray-600 mt-4 text-sm">
+                    ✅ Funciona em WordPress, Shopify, HTML puro, React, Vue e qualquer plataforma web
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="casos-uso" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Para qualquer tipo de negócio
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Veja como diferentes empresas usam Vaca Stories
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+                    <div class="text-5xl mb-4">🏗️</div>
+                    <h4 class="text-xl font-bold mb-3">Construtoras</h4>
+                    <p class="text-gray-600 text-sm">
+                        Mostre andamento de obras, diferenciais, depoimentos de clientes satisfeitos
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+                    <div class="text-5xl mb-4">🛒</div>
+                    <h4 class="text-xl font-bold mb-3">E-commerce</h4>
+                    <p class="text-gray-600 text-sm">
+                        Demonstre produtos em uso, unboxing, reviews, ofertas especiais
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+                    <div class="text-5xl mb-4">🍕</div>
+                    <h4 class="text-xl font-bold mb-3">Restaurantes</h4>
+                    <p class="text-gray-600 text-sm">
+                        Pratos do dia, bastidores da cozinha, depoimentos, promoções
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+                    <div class="text-5xl mb-4">💼</div>
+                    <h4 class="text-xl font-bold mb-3">Serviços</h4>
+                    <p class="text-gray-600 text-sm">
+                        Apresentação da equipe, processos, cases de sucesso, FAQ
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+                    <div class="text-5xl mb-4">🏋️</div>
+                    <h4 class="text-xl font-bold mb-3">Academias</h4>
+                    <p class="text-gray-600 text-sm">
+                        Treinos do dia, transformações, depoimentos, tour pela academia
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+                    <div class="text-5xl mb-4">🏠</div>
+                    <h4 class="text-xl font-bold mb-3">Imobiliárias</h4>
+                    <p class="text-gray-600 text-sm">
+                        Tours virtuais, lançamentos, bairros, dicas para compradores
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+                    <div class="text-5xl mb-4">🎓</div>
+                    <h4 class="text-xl font-bold mb-3">Cursos</h4>
+                    <p class="text-gray-600 text-sm">
+                        Aulas gratuitas, depoimentos de alunos, apresentação de professores
+                    </p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl shadow-sm card-hover">
+                    <div class="text-5xl mb-4">💇</div>
+                    <h4 class="text-xl font-bold mb-3">Salões</h4>
+                    <p class="text-gray-600 text-sm">
+                        Antes/depois, técnicas, produtos usados, dicas de beleza
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Quem já está usando e aprovando
+                </h2>
+            </div>
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 border-2 border-green-500">
+                <div class="flex items-start gap-6 mb-8">
+                    <div class="bg-green-100 rounded-full p-4 flex-shrink-0">
+                        <i class="fas fa-building text-green-600 text-3xl"></i>
+                    </div>
+                    <div>
+                        <div class="flex items-center gap-2 mb-3">
+                            <div class="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                            "Implementamos o Vaca Stories no nosso site de lançamentos imobiliários e o resultado foi impressionante. 
+                            Conseguimos mostrar o andamento das obras, depoimentos de clientes e tours virtuais dos apartamentos. 
+                            O tempo médio no site aumentou 280% e as conversões subiram significativamente. 
+                            O dashboard é super intuitivo e a integração foi muito fácil."
+                        </p>
+                        <div class="border-t pt-6">
+                            <p class="font-bold text-gray-900">Paulo Mendes</p>
+                            <p class="text-gray-600">Diretor de Marketing - Construtora Horizonte</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="preco" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Preço simples e transparente
+                </h2>
+                <p class="text-xl text-gray-600">
+                    Sem pegadinhas, sem limites escondidos. Pague e use à vontade.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border-4 border-green-500">
+                <div class="gradient-bg text-white text-center py-6">
+                    <p class="text-lg font-semibold">PLANO ÚNICO</p>
+                </div>
+                <div class="p-12">
+                    <div class="text-center mb-8">
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <span class="text-gray-500 text-2xl line-through">R$ 149,90</span>
+                            <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold">
+                                40% OFF
+                            </span>
+                        </div>
+                        <div class="flex items-start justify-center mb-2">
+                            <span class="text-5xl font-bold text-gray-900">R$</span>
+                            <span class="text-8xl font-bold gradient-text">89</span>
+                            <span class="text-3xl text-gray-600 mt-8">,90</span>
+                        </div>
+                        <p class="text-xl text-gray-600">por mês</p>
+                    </div>
+
+                    <div class="space-y-4 mb-10">
+                        <div class="flex items-center gap-4 p-4 bg-green-50 rounded-xl">
+                            <i class="fas fa-infinity text-green-600 text-2xl"></i>
+                            <span class="text-gray-700 font-semibold">Vídeos ilimitados</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-green-50 rounded-xl">
+                            <i class="fas fa-infinity text-green-600 text-2xl"></i>
+                            <span class="text-gray-700 font-semibold">Visualizações ilimitadas</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-green-50 rounded-xl">
+                            <i class="fas fa-infinity text-green-600 text-2xl"></i>
+                            <span class="text-gray-700 font-semibold">Tokens de integração ilimitados</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-green-50 rounded-xl">
+                            <i class="fas fa-chart-line text-green-600 text-2xl"></i>
+                            <span class="text-gray-700 font-semibold">Analytics completo + GA4</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-green-50 rounded-xl">
+                            <i class="fas fa-tachometer-alt text-green-600 text-2xl"></i>
+                            <span class="text-gray-700 font-semibold">Autoplay e carregamento otimizado</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-green-50 rounded-xl">
+                            <i class="fas fa-mobile-alt text-green-600 text-2xl"></i>
+                            <span class="text-gray-700 font-semibold">100% responsivo</span>
+                        </div>
+                        <div class="flex items-center gap-4 p-4 bg-green-50 rounded-xl">
+                            <i class="fas fa-headset text-green-600 text-2xl"></i>
+                            <span class="text-gray-700 font-semibold">Suporte técnico</span>
+                        </div>
+                    </div>
+
+                    <a href="#cta" class="block gradient-bg text-white text-center px-8 py-5 rounded-xl font-bold text-xl hover:opacity-90 transition shadow-lg pulse-btn">
+                        Começar Agora - R$ 89,90/mês
+                    </a>
+                    
+                    <div class="text-center mt-6 space-y-2">
+                        <p class="text-sm text-gray-600">
+                            <i class="fas fa-shield-alt text-green-600"></i> Pagamento seguro via Mercado Pago (PIX)
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            <i class="fas fa-sync text-green-600"></i> Renovação automática mensal
+                        </p>
+                        <p class="text-sm text-gray-600">
+                            <i class="fas fa-times-circle text-green-600"></i> Cancele quando quiser
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-blue-50 border-2 border-blue-200 rounded-2xl p-6">
+                <div class="flex items-start gap-4">
+                    <i class="fas fa-lightbulb text-blue-600 text-3xl mt-1"></i>
+                    <div>
+                        <h4 class="font-bold text-xl text-gray-900 mb-2">Calcule o ROI</h4>
+                        <p class="text-gray-700">
+                            Se você converter apenas <strong>1 cliente a mais por mês</strong> usando stories no seu site, 
+                            o investimento de R$ 89,90 já se paga sozinho. Tudo que vier depois é lucro puro! 💰
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                    Perguntas Frequentes
+                </h2>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+                    <h4 class="font-bold text-xl text-gray-900 mb-3">
+                        <i class="fas fa-question-circle text-green-600 mr-3"></i>
+                        Funciona em qualquer site?
+                    </h4>
+                    <p class="text-gray-600 pl-10">
+                        Sim! Funciona em WordPress, Shopify, Wix, HTML puro, React, Vue, Angular e qualquer plataforma web. 
+                        Basta colar o código de integração.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+                    <h4 class="font-bold text-xl text-gray-900 mb-3">
+                        <i class="fas fa-question-circle text-green-600 mr-3"></i>
+                        Existe limite de vídeos ou views?
+                    </h4>
+                    <p class="text-gray-600 pl-10">
+                        Não! Por R$ 89,90/mês você tem uso completamente ilimitado. Pode fazer upload de quantos vídeos quiser 
+                        e ter quantas visualizações precisar. Sem taxas adicionais.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+                    <h4 class="font-bold text-xl text-gray-900 mb-3">
+                        <i class="fas fa-question-circle text-green-600 mr-3"></i>
+                        Como faço para cancelar?
+                    </h4>
+                    <p class="text-gray-600 pl-10">
+                        Você pode cancelar a qualquer momento diretamente no dashboard. Sem multas, sem burocracia. 
+                        Após o cancelamento, você ainda tem acesso até o fim do período pago.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+                    <h4 class="font-bold text-xl text-gray-900 mb-3">
+                        <i class="fas fa-question-circle text-green-600 mr-3"></i>
+                        Tem período de teste gratuito?
+                    </h4>
+                    <p class="text-gray-600 pl-10">
+                        Não oferecemos trial gratuito no momento, mas temos garantia de 7 dias. 
+                        Se não ficar satisfeito, devolvemos 100% do seu dinheiro sem perguntas.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+                    <h4 class="font-bold text-xl text-gray-900 mb-3">
+                        <i class="fas fa-question-circle text-green-600 mr-3"></i>
+                        Preciso ter conhecimento técnico?
+                    </h4>
+                    <p class="text-gray-600 pl-10">
+                        Não! O dashboard é super intuitivo. Você faz upload dos vídeos igual faz upload de fotos no Instagram. 
+                        Para integrar no site, basta copiar e colar uma linha de código (ensinamos passo a passo).
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+                    <h4 class="font-bold text-xl text-gray-900 mb-3">
+                        <i class="fas fa-question-circle text-green-600 mr-3"></i>
+                        Os vídeos ficam lentos no site?
+                    </h4>
+                    <p class="text-gray-600 pl-10">
+                        Não! Usamos CDN global e otimização automática. Os vídeos carregam rapidamente 
+                        e não afetam a velocidade do seu site. Inclusive melhoram o tempo de permanência!
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm p-8 border border-gray-100">
+                    <h4 class="font-bold text-xl text-gray-900 mb-3">
+                        <i class="fas fa-question-circle text-green-600 mr-3"></i>
+                        Posso usar em vários sites?
+                    </h4>
+                    <p class="text-gray-600 pl-10">
+                        Sim! Você pode criar múltiplos tokens de integração e usar em quantos sites quiser, 
+                        todos gerenciados pelo mesmo dashboard.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta" class="py-20 px-4 sm:px-6 lg:px-8 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl lg:text-5xl font-bold mb-6">
+                Pronto para aumentar suas conversões?
+            </h2>
+            <p class="text-xl mb-8 opacity-90">
+                Junte-se a empresas que já estão retendo visitantes e convertendo mais com Vaca Stories
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="https://app.vacastories.com.br" class="bg-white text-green-600 px-10 py-5 rounded-xl font-bold text-xl hover:bg-gray-100 transition shadow-lg">
+                    Começar Agora - R$ 89,90/mês
+                </a>
+            </div>
+            <div class="flex items-center justify-center gap-8 text-sm opacity-90">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Implementação em 10 minutos</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Sem limite de uso</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Cancele quando quiser</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="text-3xl">🐄</div>
+                        <span class="text-xl font-bold">Vaca Stories</span>
+                    </div>
+                    <p class="text-gray-400 text-sm">
+                        Plataforma de stories para seu negócio. Aumente o engajamento e retenha mais visitantes.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Produto</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#beneficios" class="hover:text-white transition">Benefícios</a></li>
+                        <li><a href="#como-funciona" class="hover:text-white transition">Como Funciona</a></li>
+                        <li><a href="#preco" class="hover:text-white transition">Preço</a></li>
+                        <li><a href="#casos-uso" class="hover:text-white transition">Casos de Uso</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Suporte</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Documentação</a></li>
+                        <li><a href="#" class="hover:text-white transition">FAQ</a></li>
+                        <li><a href="#" class="hover:text-white transition">Contato</a></li>
+                        <li><a href="#" class="hover:text-white transition">Status</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-white transition">Termos de Uso</a></li>
+                        <li><a href="#" class="hover:text-white transition">Política de Privacidade</a></li>
+                        <li><a href="#" class="hover:text-white transition">LGPD</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
+                <p>&copy; 2024 Vaca Stories. Todos os direitos reservados.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
